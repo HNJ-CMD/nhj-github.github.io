@@ -311,6 +311,95 @@
       background: var(--gradient-2);
       opacity: 0.3;
     }
+
+    /* 新增样式 */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .feature-card {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .team-member {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .team-member:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .member-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 2px solid var(--accent-color);
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .news-card {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 15px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .news-card:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .news-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .news-content {
+      padding: 1.5rem;
+    }
+
+    .news-date {
+      color: var(--accent-color);
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 
@@ -321,7 +410,10 @@
         <ul>
           <li><a href="#home">首页</a></li>
           <li><a href="#about">关于我们</a></li>
+          <li><a href="#features">核心优势</a></li>
           <li><a href="#products">产品创新</a></li>
+          <li><a href="#team">团队介绍</a></li>
+          <li><a href="#news">新闻动态</a></li>
           <li><a href="#contact">联系我们</a></li>
         </ul>
       </nav>
@@ -329,13 +421,41 @@
     <div class="hero-content">
       <h1>创新科技 引领未来</h1>
       <p>突破边界 • 创造可能 • 定义明天</p>
+      <p style="margin-top: 2rem; font-size: 1.2rem;">用科技改变世界，以创新塑造未来</p>
     </div>
   </header>
 
   <main>
     <section id="about" class="visible">
       <h2>关于我们</h2>
-      <p>我们是一家致力于突破技术边界的创新企业，专注于开发前沿科技解决方案。通过持续创新和卓越的技术实力，我们为客户提供革命性的产品和服务。以科技改变世界，用创新塑造未来。</p>
+      <p>我们是一家致力于突破技术边界的创新企业，专注于开发前沿科技解决方案。通过持续创新和卓越的技术实力，我们为客户提供革命性的产品和服务。</p>
+      <p style="margin-top: 1rem;">成立十年来，我们始终坚持"以客户为中心，以创新为动力"的理念，在人工智能、大数据分析、云计算等领域取得了显著成就。我们的技术团队由行业顶尖专家组成，致力于为全球客户提供最前沿的技术解决方案。</p>
+    </section>
+
+    <section id="features">
+      <h2>核心优势</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🚀</div>
+          <h3>技术创新</h3>
+          <p>持续投入研发，保持技术领先优势</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌟</div>
+          <h3>专业团队</h3>
+          <p>汇聚行业精英，打造专业技术团队</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>优质服务</h3>
+          <p>提供全方位的技术支持和服务</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌐</div>
+          <h3>全球视野</h3>
+          <p>布局全球市场，服务国际客户</p>
+        </div>
+      </div>
     </section>
 
     <section id="products">
@@ -344,14 +464,88 @@
         <div class="product-card">
           <h3>AI智能解决方案</h3>
           <p>运用前沿人工智能技术，为企业提供全方位智能化转型方案，引领产业革新。</p>
+          <ul style="margin-top: 1rem; list-style-position: inside;">
+            <li>智能决策系统</li>
+            <li>计算机视觉应用</li>
+            <li>自然语言处理</li>
+            <li>深度学习平台</li>
+          </ul>
         </div>
         <div class="product-card">
           <h3>数据分析平台</h3>
           <p>强大的数据处理能力，结合机器学习算法，助力企业精准决策，开启数据驱动新纪元。</p>
+          <ul style="margin-top: 1rem; list-style-position: inside;">
+            <li>实时数据分析</li>
+            <li>预测性分析</li>
+            <li>商业智能报表</li>
+            <li>数据可视化</li>
+          </ul>
         </div>
         <div class="product-card">
           <h3>云端服务</h3>
           <p>安全可靠的云计算服务，打造一站式数字化解决方案，助力企业腾飞。</p>
+          <ul style="margin-top: 1rem; list-style-position: inside;">
+            <li>云存储服务</li>
+            <li>容器化部署</li>
+            <li>微服务架构</li>
+            <li>安全防护</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="team">
+      <h2>团队介绍</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="https://via.placeholder.com/120" alt="团队成员" class="member-photo">
+          <h3>张明</h3>
+          <p>首席执行官</p>
+        </div>
+        <div class="team-member">
+          <img src="https://via.placeholder.com/120" alt="团队成员" class="member-photo">
+          <h3>李华</h3>
+          <p>技术总监</p>
+        </div>
+        <div class="team-member">
+          <img src="https://via.placeholder.com/120" alt="团队成员" class="member-photo">
+          <h3>王芳</h3>
+          <p>产品经理</p>
+        </div>
+        <div class="team-member">
+          <img src="https://via.placeholder.com/120" alt="团队成员" class="member-photo">
+          <h3>刘伟</h3>
+          <p>研发主管</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="news">
+      <h2>新闻动态</h2>
+      <div class="news-grid">
+        <div class="news-card">
+          <img src="https://via.placeholder.com/400x200" alt="新闻图片" class="news-image">
+          <div class="news-content">
+            <p class="news-date">2023-12-01</p>
+            <h3>公司荣获"年度最具创新力企业"称号</h3>
+            <p>在2023年度科技创新大会上，我司凭借突出的技术创新能力...</p>
+          </div>
+        </div>
+        <div class="news-card">
+          <img src="https://via.placeholder.com/400x200" alt="新闻图片" class="news-image">
+          <div class="news-content">
+            <p class="news-date">2023-11-15</p>
+            <h3>新一代AI产品发布会圆满成功</h3>
+            <p>我司最新研发的AI产品在京发布，获得业界广泛关注...</p>
+          </div>
+        </div>
+        <div class="news-card">
+          <img src="https://via.placeholder.com/400x200" alt="新闻图片" class="news-image">
+          <div class="news-content">
+            <p class="news-date">2023-11-01</p>
+            <h3>战略合作协议签署仪式</h3>
+            <p>我司与多家知名企业达成战略合作，共同推进技术创新...</p>
+          </div>
         </div>
       </div>
     </section>
@@ -367,6 +561,12 @@
             <input type="email" id="email" name="email" placeholder="电子邮箱" required>
           </div>
           <div class="form-group">
+            <input type="tel" id="phone" name="phone" placeholder="联系电话" required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="company" name="company" placeholder="公司名称">
+          </div>
+          <div class="form-group">
             <textarea name="message" rows="5" placeholder="请输入您的留言"></textarea>
           </div>
           <button type="submit">发送信息</button>
@@ -376,6 +576,12 @@
   </main>
 
   <footer>
+    <div style="margin-bottom: 1rem;">
+      <h3 style="color: var(--accent-color)">创新科技</h3>
+      <p>地址：北京市朝阳区科技园区88号</p>
+      <p>电话：010-88888888</p>
+      <p>邮箱：contact@innovation.com</p>
+    </div>
     <p>&copy; 2023 创新科技. All rights reserved.</p>
   </footer>
 
@@ -418,6 +624,16 @@
 
       card.addEventListener('mouseleave', () => {
         card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+      });
+    });
+
+    // 新增：平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
       });
     });
   </script>
